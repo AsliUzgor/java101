@@ -6,17 +6,25 @@ public class Course {
     String code;
     String prefix;
     int note ;
+    int perfNote;
 
-    Course(String name , String code, String prefix , Teacher teacher){
+    Course(String name , String code, String prefix){
         this.name = name;
         this.code = code;
         this.prefix = prefix;
         this.note = 0;
-        this.teacher = teacher;
+        this.perfNote = 0;
+
     }
 
     void addTeacher(Teacher teacher){
-        this.teacher = teacher;
+        if(teacher.branch.equals(this.prefix)){
+            this.teacher = teacher;
+            //this.printTeacher();
+        }else{
+            System.out.println("Öğretmen ve ders bölümleri uyuşmuyor. ");
+        }
+
     }
 
     void printTeacher(){

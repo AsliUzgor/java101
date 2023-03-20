@@ -11,7 +11,6 @@ public class Teacher {
         this.branch = branch;
         this.mpno = mpno;
     }
-
     void print(){
         System.out.println("Adı : " + this.name);
         System.out.println("Telefonu : " + this.mpno);
